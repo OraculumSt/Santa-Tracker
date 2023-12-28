@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow Santa Claus in live!</title>
+  <!-- Collegamento al CSS (se necessario) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/santa.png">
+  <!-- Collegamento a librerie esterne o script JavaScript (se necessario) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+  <header>
+    <img src="img/header.png" style="width: 200px;">
+    <nav>
+    <a href="#" class="active">Track Santa Claus</a>
+    <a href="index.html#about">Information about Santa's journey</a>
+    <a href="countdown.html">Countdown to Xmas</a>
+  </nav>
+
+  </header>
+  <nav role="navigation" class="navigation">
+    <div id="menuToggle">
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+    
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <a href="#"><li class="li-c-active">Who we are</li></a><br>
+        <a href="index.html#about"><li>About Santa's journey</li></a>
+        <a href="countdown.html"><li>Countdown to Xmas</li></a>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <div class="countdown-container">
+    <h1>Departure in:</h1>
+    <div id="countdown" class="countdown"></div>
+  </div>
+  
+<br><br>
+<center>
+  <button id="toggleZoom" class="leaflet-bar-part leaflet-bar-part-single" onclick="toggleZoom()">Stop following Santa Claus</button>
+  </center>
+
+<main>
+  <div id="map"></div>
+</main>
+
+<div id="about">
+  <center><h1>Information about Santa's journey</h1></center>
+  <h3 style="margin: 10px; text-align: center;">
+    Santa Claus on December 24 at 9:30 a.m. (UTC) comes out of his hut to deliver presents all over the world in just 24 hours! <br> So that good children will find their presents under their Christmas tree on the day of December 25. <br>With this map you and your family can follow Santa's journey live and who knows maybe he will even show up shining brightly in the sky!
+  </h3>
+</div>
+
+<br>
+<center>
+  <p>Santa Tracker developed by <a href="https://oraculumst.com" style="color: violet;">OraculumSt. </a>This is an OpenSource code, find it on our github page!</p>
+</center>
+
+
+
+  <script src="js/script.js"></script>
+  <script src="js/countdown-departure.js"></script>
+</body>
+</html>
